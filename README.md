@@ -1,27 +1,76 @@
-# NgxSnowf
+# ngx-snowf
+<p>
+  <a href="https://www.npmjs.com/package/ngx-snowf"><img src="https://img.shields.io/npm/v/ngx-snowf.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/ngx-snowf"><img src="https://img.shields.io/npm/dt/ngx-snowf.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/ngx-snowf"><img src="https://img.shields.io/npm/l/ngx-snowf.svg" alt="License"></a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+> Snowfall component for Angular2+ -- Let it snow on your page! ❄
 
-## Development server
+![](preview.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Install
 
-## Code scaffolding
+#### [npm](https://www.npmjs.com/package/ngx-snowf):
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm install ngx-snowf --save
+```
 
-## Build
+### Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+add SnowfModule to NgModule
 
-## Running unit tests
+```javascript
+import { SnowfModule } from 'ngx-snowf';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+    imports: [
+        SnowfModule
+    ]
+})
+```
 
-## Running end-to-end tests
+use snowf component in template
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```html
+<Snowf
+  [amount]="50"
+  [size]="5"
+  [speed]="1.5"
+  [wind]="0"
+  [color]="'#fff'"
+  [opacity]="0.8"
+  [swing]="1"
+  [image]=""
+  [zIndex]=""
+/>
+```
 
-## Further help
+### Default Options
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Argument | Type | Default Value | Description
+:---: | :---: | :---: | ---
+**amount** | *Number* | *50* | Number of snowflakes displayed at a time.
+**size** | *Number* | *5* | Size of snowflakes.
+**speed** | *Number* | *1.5* | Vertical speed of snowflakes. The larger, the snowflakes drop faster.
+**wind** | *Number* | *0* | Horizontal wind power. Wind will blow right if this is a positive number, and a negative number makes wind blow left.
+**color** | *String* | *'#fff'* | Color of snowflakes. This option accepts HEX or RGB color code, such as "#fff", "#ffffff", "rgb(255,255,255)".
+**opacity** | *Number* | *0.8* | The max opacity of snowflakes. The plugin will generate snowflakes with different opacity from 0 to this number.
+**swing** | *Number* | *1* | Swing offset of snowflakes. If you don't want them to swing, set this option as 0.
+**image** | *String* | *null* | Set this option to replace the snowflake with your image.
+**zIndex** | *Number* | *null* | Position of the canvas layer. Set the layer front or back by changing this value.
+
+### Others
+
+#### [snowf](https://github.com/Fuxy526/snowf.git) (use snowf with Vanilla JS)
+
+#### [react-snowf](https://github.com/Fuxy526/react-snowf.git) (use snowf with React)
+
+#### [vue-snowf](https://github.com/Fuxy526/vue-snowf.git) (use snowf with Vue)
+
+### Licence
+
+ngx-snowf is open source and released under the MIT Licence.
+
+Copyright (c) 2017 Fuxy526

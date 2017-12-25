@@ -1,15 +1,16 @@
 {
   "name": "ngx-snowf",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Snowfall component for React -- Let it snow on your page! ❄",
+  "main": "./dist/snowf/ngx-snowf.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pkg": "webpack -p --config webpack.build.js"
   },
   "dependencies": {
     "@angular/animations": "^5.0.0",
@@ -42,9 +43,11 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "ts-loader": "^3.2.0",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.4.2"
+    "typescript": "~2.4.2",
+    "webpack": "^3.10.0"
   },
   "repository": {
     "type": "git",

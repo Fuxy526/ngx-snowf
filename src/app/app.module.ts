@@ -2,15 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SnowfComponent } from './snowf/snowf.component';
+import { SnowfModule } from './snowf/snowf.module';
+// import { SnowfModule } from '../../dist/snowf/ngx-snowf';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SnowfComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SnowfModule
   ],
   providers: [],
   bootstrap: [AppComponent]
