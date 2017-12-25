@@ -54,7 +54,11 @@
     "url": "git+https://github.com/Fuxy526/ngx-snowf.git"
   },
   "keywords": [
-    "snowf"
+    "snow",
+    "snowf",
+    "snowflake",
+    "snowfall",
+    "angular"
   ],
   "author": "Fuxy526",
   "license": "MIT",
